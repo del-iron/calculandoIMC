@@ -1,60 +1,85 @@
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    background: #ffffff;
+}
+
+header nav {
+    background-color: #00796b; /* Nova cor */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Formulário */
+form {
+    background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    color: #4caf50;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  input {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+input, button {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  #resultado {
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+/* Gráfico */
+#chart-container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+canvas {
+    width: 100%;
+    height: 300px;
+}
+
+/* Centralizando o h2 e o resultado */
+#resultado {
+    text-align: center;
+}
+
+#resultado h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#resultado-imc {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00796b;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #00796b;
+    color: white;
     margin-top: 20px;
-    font-size: 1.2em;
-  }
-  
+}

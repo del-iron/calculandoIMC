@@ -1,26 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de IMC</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC com Gráfico</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Importa Chart.js -->
 </head>
 <body>
-  <div class="container">
-    <h1>Calculadora de IMC</h1>
-    <form id="imc-form">
-      <label for="peso">Peso (kg):</label>
-      <input type="number" id="peso" placeholder="Ex: 70" required>
-      
-      <label for="altura">Altura (m):</label>
-      <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75" required>
-      
-      <button type="button" onclick="calcularIMC()">Calcular</button>
-    </form>
-    <div id="resultado"></div>
-  </div>
+    <header>
+        <nav>
+            <h1>Calculadora de IMC</h1>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="form-imc">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome..." required>
 
-  <script src="script.js"></script>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" placeholder="Digite sua idade..." required>
+
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" step="0.01" placeholder="Ex.: 1.75" required>
+
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" step="0.1" placeholder="Ex.: 70.5" required>
+
+                <button type="submit">Calcular</button>
+            </form>
+        </section>
+
+        <section id="resultado" style="display: none;">
+            <h2>Resultado do IMC</h2>
+            <p id="resultado-imc"></p> <!-- Resultado do IMC com nome -->
+            <div id="chart-container">
+                <canvas id="chart-peso-ideal"></canvas>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Jardel M.Rocha • Mantenha sua saúde em dia!</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
